@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&family=Raleway:wght@700&display=swap');
+
+/*variables*/
+$bgcolor: #4F2683;
+$fgcolor: #ffffff;
+$containerbgclr: #FFC62F;
+$fontfamily: 'Alexandria', sans-serif;
+
+
+body {
+	background-color: $bgcolor;
+	margin: 0;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	& > #bookmark-container {
+		flex-direction: column;
+		width: 60%;
+	}
+}
+#clock {
+	font-family: $fontfamily;
+	font-size: 3.5rem;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 0.25em;
+	margin-top: 1em;
+}
+#search {
+	width: 100%;
+	height: 100vh;
+	background-color: $bgcolor;
+	display: none;
+	position: absolute;
+	box-sizing: border-box;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#search-field {
+	width: 90%;
+	padding: 0.75em 1em;
+	box-sizing: border-box;
+	background-color: $containerbgclr;
+	border: solid 0px #272727;
+	font-family: $fontfamily;
+	font-size: 4rem;
+	color: #ffffff;
+	outline: none;
+	border-radius: 3px;
+	margin-bottom: 1em;
+	text-align: center;
+}
+.weather-container {
+	width: 30%;
+	background-color: $containerbgclr;
+	padding: 1em;
+	border-radius: 3px;
+	font-family: $fontfamily;
+	color: #ffffff;
+	text-align: center;
+}
+.inline {
+	display: inline-block;
+}
+#bookmark-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 50%;
+	margin: 1em 0em;
+	& > .bookmark-set {
+		width: auto;
+		margin: 1em 0em;
+	}
+}
+
+.bookmark-set {
+		padding: 1em;
+		background-color: $bgcolor;
+		border-radius: 3px;
+		font-family: $fontfamily;
+		font-size: 0.85rem;
+		width: 25%;
+		height: 12em;
+		margin: 0em 0.5em;
+		box-sizing: border-box;
+	}
+
+.bookmark-inner-container {
+	overflow-y: scroll;
+	height: 80%;
+	vertical-align: top;
+	padding-right: 6px;
+	box-sizing: border-box;
+	scrollbar-width: thin;
+	scrollbar-color: #3f3f3f;
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #ffffff00;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #3f3f3f;
+		border-radius: 6px;
+		border: 3px solid #ffffff00;
+	}
+}
+.bookmark-title {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #ffffff;
+	margin: 0em 0em 0.35em 0em;
+}
+.bookmark {
+	text-decoration: none;
+	color: #b3b3b3;
+	display: block;
+	margin: 0.5em 0em;
+	&:hover {
+		color: #ffffff;
+	}
+}

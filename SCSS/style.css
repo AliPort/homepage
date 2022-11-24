@@ -1,18 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-
-:root {
-  --bg: #5f4b8b;
-  --fg: #ffffff;
-  --secondaryFg: #b3b3b3;
-  --containerBg: #272727;
-  --searchBg: var(--containerBg);
-  --scrollbarColor: #3f3f3f;
-  --fontFamily: 'Roboto Mono', monospace;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Alexandria&family=Raleway:wght@700&display=swap");
+/*variables*/
 body {
-  background-color: var(--bg);
-  margin: 0px;
+  background-color: #4F2683;
+  margin: 0;
 }
 
 .container {
@@ -23,20 +13,24 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.container > #bookmark-container {
+  flex-direction: column;
+  width: 60%;
+}
 
 #clock {
-  font-family: sans-serif;
+  font-family: "Alexandria", sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
-  font-family: var(--fontFamily);
-  color: var(--fg);
+  color: #ffffff;
   margin-bottom: 0.25em;
+  margin-top: 1em;
 }
 
 #search {
   width: 100%;
   height: 100vh;
-  background-color: var(--searchBg);
+  background-color: #4F2683;
   display: none;
   position: absolute;
   box-sizing: border-box;
@@ -49,11 +43,11 @@ body {
   width: 90%;
   padding: 0.75em 1em;
   box-sizing: border-box;
-  background-color: var(--searchBg);
-  border: solid 0px var(--searchBg);
-  font-family: var(--fontFamily);
+  background-color: #FFC62F;
+  border: solid 0px #272727;
+  font-family: "Alexandria", sans-serif;
   font-size: 4rem;
-  color: var(--fg);
+  color: #ffffff;
   outline: none;
   border-radius: 3px;
   margin-bottom: 1em;
@@ -62,13 +56,14 @@ body {
 
 .weather-container {
   width: 30%;
-  background-color: var(--containerBg);
+  background-color: #FFC62F;
   padding: 1em;
   border-radius: 3px;
-  font-family: var(--fontFamily);
-  color: var(--fg);
+  font-family: "Alexandria", sans-serif;
+  color: #ffffff;
   text-align: center;
 }
+
 .inline {
   display: inline-block;
 }
@@ -80,29 +75,16 @@ body {
   width: 50%;
   margin: 1em 0em;
 }
-
-@media only screen and (max-width: 960px) {
-  .container {
-    height: auto;
-  }
-  #clock {
-    margin-top: 1em;
-  }
-  .container > #bookmark-container {
-    flex-direction: column;
-    width: 60%;
-  }
-  #bookmark-container > .bookmark-set {
-    width: auto;
-    margin: 1em 0em;
-  }
+#bookmark-container > .bookmark-set {
+  width: auto;
+  margin: 1em 0em;
 }
 
 .bookmark-set {
   padding: 1em;
-  background-color: var(--containerBg);
+  background-color: #4F2683;
   border-radius: 3px;
-  font-family: var(--fontFamily);
+  font-family: "Alexandria", sans-serif;
   font-size: 0.85rem;
   width: 25%;
   height: 12em;
@@ -116,35 +98,34 @@ body {
   vertical-align: top;
   padding-right: 6px;
   box-sizing: border-box;
-
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbarColor) #ffffff00;
+  scrollbar-color: #3f3f3f;
 }
-
 .bookmark-inner-container::-webkit-scrollbar {
   width: 6px;
 }
 .bookmark-inner-container::-webkit-scrollbar-track {
-  background: #ffffff00;
+  background: rgba(255, 255, 255, 0);
 }
 .bookmark-inner-container::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbarColor);
+  background-color: #3f3f3f;
   border-radius: 6px;
-  border: 3px solid #ffffff00;
+  border: 3px solid rgba(255, 255, 255, 0);
 }
 
 .bookmark-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--fg);
+  color: #ffffff;
   margin: 0em 0em 0.35em 0em;
 }
+
 .bookmark {
   text-decoration: none;
-  color: var(--secondaryFg);
+  color: #b3b3b3;
   display: block;
   margin: 0.5em 0em;
 }
 .bookmark:hover {
-  color: var(--fg);
-}
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
